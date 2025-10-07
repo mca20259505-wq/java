@@ -29,5 +29,10 @@ public class qs_11 {
             System.out.println("not operato :" + !(x >= y));
         }
 
+        System.out.println("\n Assignment Operators :");
+        System.out.println("increment and assign  :" + (x += 5));
+        System.out.println("decrement and assign :"+ (x -= 5));
+        System.out.println("multiplication and assign :" + (x *= 5));
+        System.out.println("divide and assign :" + (x /= 5));
     }
 }
