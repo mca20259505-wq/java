@@ -24,7 +24,7 @@ public class qs_17 {
         int physics = sc.nextInt();
 
         int total_marks = history + polity + physics;
-        double percentage = (total_marks / 300) * 100;
+        float percentage = (total_marks / 300f) * 100;
         
         System.out.println("\n\n ====== Marksheet ======");
         System.out.println("Student Name :" + name);
