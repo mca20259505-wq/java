@@ -5,7 +5,6 @@ public class qs_13 {
 
     System.out.println("Enter radius :");
     int n = sc.nextInt();
-
     double area = Math.PI * (n * n);
     System.out.println(area);
     sc.close();
