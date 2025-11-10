@@ -11,8 +11,13 @@ public class FileHandling{
             File f = new File("ISTAR.txt");
             File f2 = new File("MCA.txt");
 
-            if (f.createNewFile() && f2.createNewFile()){
-                System.out.println("files created   " + f.getName() + " and " + f2.getName());
+            if (f.createNewFile() ){
+                System.out.println("files created   " + f.getName());
+            }else{
+                System.out.println("Something went wrong!!");
+            }
+            if (f2.createNewFile() ){
+                System.out.println("files created   " + f2.getName());
             }else{
                 System.out.println("Something went wrong!!");
             }
