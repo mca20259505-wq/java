@@ -21,3 +21,5 @@ public class qs_23 {
         sc.close();
     }
 }
+
+
