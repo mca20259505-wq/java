@@ -1,6 +1,6 @@
 // package LAB_MANUAL.QS-1;
 import java.util.Scanner;
-public class Two {
+public class qs_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
