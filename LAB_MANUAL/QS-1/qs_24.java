@@ -48,12 +48,25 @@ public class qs_24 {
         }
 
         System.out.println("addition of 2 matrices :");
+        
         for(int i =0;i<rows;i++)
         {
             for(int j=0;j<cols;j++)
             {
-                
+              
+                System.out.print(matrix1[i][j] + matrix2[i][j] + "  ");
             }
+            System.out.println();
+        }
+
+        System.out.println("multiplication of 2 matrices :");
+        for(int i = 0; i < rows; i++)
+        {
+            for(int j=0; j<cols; j++)
+            {
+                System.out.print(matrix1[i][j] * matrix2[i][j] + "  ");
+            }
+            System.out.println();
         }
         sc.close();
     }
