@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Heart Rain Login</title>
+<style>
+  /* 🔹 Page Setup */
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* 🔹 Falling Hearts */
+  .heart {
+    position: absolute;
+    top: -10px;
+    color: #ff3366;
+    font-size: 20px;
+    animation: fall linear forwards;
+    pointer-events: none;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* 🔹 Login Container (Glassmorphism style) */
+  .login-box {
+    position: relative;
+    width: 320px;
+    padding: 40px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1); /* transparent glass look */
+    backdrop-filter: blur(12px);           /* blur background behind */
+    box-shadow: 0 0 30px rgba(255, 51, 102, 0.4); /* soft glow */
+    color: #fff;
+    text-align: center;
+    z-index: 10; /* above hearts */
+  }
+
+  .login-box h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ff6688;
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.6);
+  }
+
+  .login-box input {
+    width: 100%;
+    padding: 10px 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 15px;
+    outline: none;
+  }
+
+  .login-box input::placeholder {
+    color: #ddd;
+  }
+
+  .login-box button {
+    width: 109%;
+    padding: 10px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #ff3366, #ff6699);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .login-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff3366;
+  }
+
+  .login-box p {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #ccc;
+  }
+
+  .login-box a {
+    color: #ff6688;
+    text-decoration: none;
+  }
+
+  /* 🔹 Responsive for phones */
+  @media (max-width: 480px) {
+    .login-box {
+      width: 85%;
+      padding: 30px;
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- ❤️ Login Panel -->
+  <div class="login-box">
+    <h2>Welcome Back 💖</h2>
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button>Login</button>
+    <p>Don't have an account? <a href="#">Register</a></p>
+  </div>
+
+  <!-- ❤️ Heart Rain Script -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = 10 + Math.random() * 25 + "px";
+      heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 200);
+  </script>
+</body>
+</html>
+js uper se gayi.... ayein
