@@ -17,5 +17,7 @@ public class qs_5 {
 
         int r = fact(num);
         System.out.println("factorial of " + num + " is " + r);
+
+        sc.close();
     }
 }
